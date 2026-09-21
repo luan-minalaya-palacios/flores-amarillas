@@ -8,15 +8,23 @@
     box-sizing: border-box;
 }
 
-html,
-body {
-    width: 100%;
-    min-height: 100%;
+html {
+    scroll-behavior: smooth;
 }
 
 body {
     font-family: Georgia, "Times New Roman", serif;
     overflow-x: hidden;
+}
+
+.pantalla {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
 }
 
 
@@ -25,11 +33,6 @@ body {
 ========================= */
 
 .portada {
-    min-height: 100vh;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
     text-align: center;
 
@@ -42,17 +45,11 @@ body {
             #ffd45c 100%
         );
 
-    position: relative;
-
     overflow: hidden;
 }
 
-
-/* =========================
-   CONTENIDO
-========================= */
-
 .contenido-portada {
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -63,12 +60,8 @@ body {
     animation: aparecer 1.5s ease;
 }
 
-
-/* =========================
-   FLORES SUPERIORES
-========================= */
-
 .flores-superiores {
+
     font-size: 2.2rem;
 
     letter-spacing: 12px;
@@ -78,13 +71,10 @@ body {
     animation: flotar 3s ease-in-out infinite;
 }
 
-
-/* =========================
-   HELLO KITTY
-========================= */
-
 .hello-kitty {
+
     width: 230px;
+
     max-width: 65vw;
 
     border-radius: 30px;
@@ -97,12 +87,8 @@ body {
     animation: entrada-gatita 1.4s ease;
 }
 
-
-/* =========================
-   TITULO
-========================= */
-
 h1 {
+
     font-size: clamp(2.5rem, 7vw, 4.5rem);
 
     color: #7b5200;
@@ -113,12 +99,8 @@ h1 {
         2px 2px 0 rgba(255, 255, 255, 0.6);
 }
 
-
-/* =========================
-   SUBTITULO
-========================= */
-
 .subtitulo {
+
     font-size: clamp(1.1rem, 3vw, 1.5rem);
 
     color: #765c20;
@@ -126,12 +108,9 @@ h1 {
     margin-bottom: 35px;
 }
 
+.boton-comenzar,
+.boton-siguiente {
 
-/* =========================
-   BOTÓN
-========================= */
-
-.boton-comenzar {
     border: none;
 
     padding: 17px 38px;
@@ -153,13 +132,12 @@ h1 {
     box-shadow:
         0 8px 20px rgba(160, 110, 0, 0.25);
 
-    transition:
-        transform 0.3s ease,
-        box-shadow 0.3s ease,
-        background 0.3s ease;
+    transition: 0.3s ease;
 }
 
-.boton-comenzar:hover {
+.boton-comenzar:hover,
+.boton-siguiente:hover {
+
     transform: translateY(-4px) scale(1.04);
 
     background: #e9a900;
@@ -168,8 +146,320 @@ h1 {
         0 12px 25px rgba(160, 110, 0, 0.35);
 }
 
-.boton-comenzar:active {
-    transform: scale(0.96);
+
+/* =========================
+   ESCENA SEMILLA
+========================= */
+
+.escena-semilla {
+
+    background:
+        linear-gradient(
+            to bottom,
+            #fff7c7 0%,
+            #e8f6d5 55%,
+            #a9d978 100%
+        );
+
+    overflow: hidden;
+
+    text-align: center;
+}
+
+.contenido-semilla {
+
+    width: 90%;
+
+    max-width: 850px;
+
+    position: relative;
+}
+
+.contenido-semilla h2 {
+
+    font-size: clamp(
+        2rem,
+        5vw,
+        3.5rem
+    );
+
+    color: #735000;
+
+    margin-bottom: 15px;
+}
+
+.texto-semilla {
+
+    font-size: 1.2rem;
+
+    color: #6c6535;
+
+    margin-bottom: 35px;
+}
+
+
+/* =========================
+   SOL
+========================= */
+
+.sol {
+
+    position: absolute;
+
+    top: 40px;
+
+    right: 8%;
+
+    font-size: 4rem;
+
+    animation: sol-flotar 4s ease-in-out infinite;
+}
+
+
+/* =========================
+   JARDÍN
+========================= */
+
+.jardin {
+
+    position: relative;
+
+    height: 390px;
+
+    width: 100%;
+
+    margin-top: 30px;
+}
+
+
+/* =========================
+   TIERRA
+========================= */
+
+.tierra {
+
+    position: absolute;
+
+    bottom: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 100px;
+
+    background:
+        linear-gradient(
+            to bottom,
+            #9a673b,
+            #704526
+        );
+
+    border-radius:
+        50% 50% 0 0;
+}
+
+
+/* =========================
+   PLANTA
+========================= */
+
+.semilla-planta {
+
+    position: absolute;
+
+    bottom: 55px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 200px;
+
+    height: 300px;
+}
+
+
+/* =========================
+   SEMILLA
+========================= */
+
+.semilla {
+
+    position: absolute;
+
+    bottom: 0;
+
+    left: 50%;
+
+    width: 35px;
+
+    height: 25px;
+
+    background: #5b381e;
+
+    border-radius: 50%;
+
+    transform:
+        translateX(-50%);
+
+    animation:
+        crecer-semilla 2s
+        ease forwards;
+}
+
+
+/* =========================
+   TALLO
+========================= */
+
+.tallo {
+
+    position: absolute;
+
+    bottom: 10px;
+
+    left: 50%;
+
+    width: 14px;
+
+    height: 0;
+
+    background:
+        linear-gradient(
+            to right,
+            #4c8a2a,
+            #77b83f
+        );
+
+    border-radius: 20px;
+
+    transform:
+        translateX(-50%);
+
+    animation:
+        crecer-tallo 4s
+        ease 2s forwards;
+}
+
+
+/* =========================
+   HOJAS
+========================= */
+
+.hoja {
+
+    position: absolute;
+
+    width: 70px;
+
+    height: 35px;
+
+    background: #67a936;
+
+    border-radius:
+        100% 0 100% 0;
+
+    opacity: 0;
+
+    transform-origin: bottom;
+}
+
+.hoja-izquierda {
+
+    left: 45px;
+
+    bottom: 100px;
+
+    transform: rotate(-25deg);
+
+    animation:
+        aparecer-hoja 1s
+        ease 5.5s forwards;
+}
+
+.hoja-derecha {
+
+    right: 45px;
+
+    bottom: 145px;
+
+    transform: scaleX(-1) rotate(-25deg);
+
+    animation:
+        aparecer-hoja 1s
+        ease 6.5s forwards;
+}
+
+
+/* =========================
+   FLOR
+========================= */
+
+.flor {
+
+    position: absolute;
+
+    left: 50%;
+
+    top: 20px;
+
+    transform:
+        translateX(-50%)
+        scale(0);
+
+    opacity: 0;
+
+    animation:
+        florecer 2s
+        ease 8s forwards;
+}
+
+.centro-flor {
+
+    font-size: 100px;
+
+    filter:
+        drop-shadow(
+            0 8px 10px
+            rgba(80, 50, 0, 0.2)
+        );
+}
+
+
+/* =========================
+   MENSAJE FINAL
+========================= */
+
+.mensaje-flor {
+
+    opacity: 0;
+
+    font-size: 1.35rem;
+
+    color: #70520a;
+
+    margin-top: 10px;
+
+    animation:
+        aparecer-mensaje 2s
+        ease 10s forwards;
+}
+
+
+/* =========================
+   BOTÓN SIGUIENTE
+========================= */
+
+.boton-siguiente {
+
+    opacity: 0;
+
+    margin-top: 25px;
+
+    animation:
+        aparecer-mensaje 2s
+        ease 11s forwards;
 }
 
 
@@ -188,7 +478,6 @@ h1 {
         opacity: 1;
         transform: translateY(0);
     }
-
 }
 
 
@@ -196,14 +485,17 @@ h1 {
 
     from {
         opacity: 0;
-        transform: scale(0.7) translateY(30px);
+        transform:
+            scale(0.7)
+            translateY(30px);
     }
 
     to {
         opacity: 1;
-        transform: scale(1) translateY(0);
+        transform:
+            scale(1)
+            translateY(0);
     }
-
 }
 
 
@@ -211,11 +503,149 @@ h1 {
 
     0%,
     100% {
-        transform: translateY(0);
+        transform:
+            translateY(0);
     }
 
     50% {
-        transform: translateY(-8px);
+        transform:
+            translateY(-8px);
+    }
+}
+
+
+@keyframes sol-flotar {
+
+    0%,
+    100% {
+        transform:
+            translateY(0);
+    }
+
+    50% {
+        transform:
+            translateY(-15px);
+    }
+}
+
+
+@keyframes crecer-semilla {
+
+    0% {
+        transform:
+            translateX(-50%)
+            scale(0.5);
+    }
+
+    100% {
+        transform:
+            translateX(-50%)
+            scale(1);
+    }
+}
+
+
+@keyframes crecer-tallo {
+
+    from {
+        height: 0;
+    }
+
+    to {
+        height: 250px;
+    }
+}
+
+
+@keyframes aparecer-hoja {
+
+    from {
+        opacity: 0;
+
+        transform:
+            scale(0)
+            rotate(-25deg);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            scale(1)
+            rotate(-25deg);
+    }
+}
+
+
+@keyframes florecer {
+
+    0% {
+        opacity: 0;
+
+        transform:
+            translateX(-50%)
+            scale(0);
+    }
+
+    70% {
+        transform:
+            translateX(-50%)
+            scale(1.2);
+    }
+
+    100% {
+        opacity: 1;
+
+        transform:
+            translateX(-50%)
+            scale(1);
+    }
+}
+
+
+@keyframes aparecer-mensaje {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+/* =========================
+   CELULARES
+========================= */
+
+@media (max-width: 600px) {
+
+    .hello-kitty {
+        width: 190px;
+    }
+
+    .flores-superiores {
+        font-size: 1.6rem;
+    }
+
+    .jardin {
+        height: 330px;
+    }
+
+    .sol {
+        font-size: 3rem;
+        top: 20px;
+    }
+
+    .centro-flor {
+        font-size: 75px;
     }
 
 }
