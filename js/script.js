@@ -29,18 +29,48 @@ const botonInicio =
 
 
 /* =========================================================
+   FUNCIÓN DE NAVEGACIÓN
+========================================================= */
+
+function irASeccion(id) {
+
+    const seccion =
+        document.getElementById(id);
+
+
+    if (!seccion) {
+        return;
+    }
+
+
+    seccion.scrollIntoView({
+
+        behavior: "smooth",
+
+        block: "start"
+
+    });
+
+}
+
+
+
+/* =========================================================
    PORTADA → JARDÍN
 ========================================================= */
 
-botonComenzar.addEventListener("click", () => {
+if (botonComenzar) {
 
-    document
-        .getElementById("semilla")
-        .scrollIntoView({
-            behavior: "smooth"
-        });
+    botonComenzar.addEventListener(
+        "click",
+        () => {
 
-});
+            irASeccion("semilla");
+
+        }
+    );
+
+}
 
 
 
@@ -48,15 +78,18 @@ botonComenzar.addEventListener("click", () => {
    JARDÍN → VIDEO
 ========================================================= */
 
-botonRecuerdo.addEventListener("click", () => {
+if (botonRecuerdo) {
 
-    document
-        .getElementById("recuerdo")
-        .scrollIntoView({
-            behavior: "smooth"
-        });
+    botonRecuerdo.addEventListener(
+        "click",
+        () => {
 
-});
+            irASeccion("recuerdo");
+
+        }
+    );
+
+}
 
 
 
@@ -64,15 +97,18 @@ botonRecuerdo.addEventListener("click", () => {
    VIDEO → FOTOS
 ========================================================= */
 
-botonFotos.addEventListener("click", () => {
+if (botonFotos) {
 
-    document
-        .getElementById("fotos")
-        .scrollIntoView({
-            behavior: "smooth"
-        });
+    botonFotos.addEventListener(
+        "click",
+        () => {
 
-});
+            irASeccion("fotos");
+
+        }
+    );
+
+}
 
 
 
@@ -80,15 +116,18 @@ botonFotos.addEventListener("click", () => {
    FOTOS → CARTA
 ========================================================= */
 
-botonMensaje.addEventListener("click", () => {
+if (botonMensaje) {
 
-    document
-        .getElementById("mensaje")
-        .scrollIntoView({
-            behavior: "smooth"
-        });
+    botonMensaje.addEventListener(
+        "click",
+        () => {
 
-});
+            irASeccion("mensaje");
+
+        }
+    );
+
+}
 
 
 
@@ -96,15 +135,18 @@ botonMensaje.addEventListener("click", () => {
    CARTA → MOMENTO ESPECIAL
 ========================================================= */
 
-botonEspecial.addEventListener("click", () => {
+if (botonEspecial) {
 
-    document
-        .getElementById("especial")
-        .scrollIntoView({
-            behavior: "smooth"
-        });
+    botonEspecial.addEventListener(
+        "click",
+        () => {
 
-});
+            irASeccion("especial");
+
+        }
+    );
+
+}
 
 
 
@@ -112,15 +154,18 @@ botonEspecial.addEventListener("click", () => {
    MOMENTO ESPECIAL → JARDÍN FINAL
 ========================================================= */
 
-botonFinal.addEventListener("click", () => {
+if (botonFinal) {
 
-    document
-        .getElementById("final-jardin")
-        .scrollIntoView({
-            behavior: "smooth"
-        });
+    botonFinal.addEventListener(
+        "click",
+        () => {
 
-});
+            irASeccion("final-jardin");
+
+        }
+    );
+
+}
 
 
 
@@ -128,15 +173,18 @@ botonFinal.addEventListener("click", () => {
    JARDÍN FINAL → MENSAJE FINAL
 ========================================================= */
 
-botonMensajeFinal.addEventListener("click", () => {
+if (botonMensajeFinal) {
 
-    document
-        .getElementById("mensaje-final")
-        .scrollIntoView({
-            behavior: "smooth"
-        });
+    botonMensajeFinal.addEventListener(
+        "click",
+        () => {
 
-});
+            irASeccion("mensaje-final");
+
+        }
+    );
+
+}
 
 
 
@@ -144,12 +192,159 @@ botonMensajeFinal.addEventListener("click", () => {
    MENSAJE FINAL → INICIO
 ========================================================= */
 
-botonInicio.addEventListener("click", () => {
+if (botonInicio) {
 
-    document
-        .getElementById("portada")
-        .scrollIntoView({
-            behavior: "smooth"
-        });
+    botonInicio.addEventListener(
+        "click",
+        () => {
 
-});
+            irASeccion("portada");
+
+        }
+    );
+
+}
+
+
+
+/* =========================================================
+   CREAR PÉTALO
+========================================================= */
+
+function crearPetalo() {
+
+    const petalo =
+        document.createElement("div");
+
+
+    petalo.classList.add(
+        "petalo-flotante"
+    );
+
+
+    const posicion =
+        Math.random() * 100;
+
+
+    const duracion =
+        7 + Math.random() * 7;
+
+
+    const retraso =
+        Math.random() * 2;
+
+
+    const tamaño =
+        0.6 + Math.random() * 0.8;
+
+
+    petalo.style.left =
+        posicion + "vw";
+
+
+    petalo.style.animationDuration =
+        duracion + "s";
+
+
+    petalo.style.animationDelay =
+        retraso + "s";
+
+
+    petalo.style.transform =
+        `scale(${tamaño})`;
+
+
+    document.body.appendChild(
+        petalo
+    );
+
+
+    setTimeout(
+        () => {
+
+            petalo.remove();
+
+        },
+        (duracion + retraso) * 1000 + 500
+    );
+
+}
+
+
+
+/* =========================================================
+   INICIAR PÉTALOS
+========================================================= */
+
+setInterval(
+    () => {
+
+        crearPetalo();
+
+    },
+    1400
+);
+
+
+
+/* =========================================================
+   CREAR PARTÍCULA DE LUZ
+========================================================= */
+
+function crearParticula() {
+
+    const particula =
+        document.createElement("div");
+
+
+    particula.classList.add(
+        "particula-luz"
+    );
+
+
+    const izquierda =
+        5 + Math.random() * 90;
+
+
+    const arriba =
+        20 + Math.random() * 70;
+
+
+    particula.style.left =
+        izquierda + "vw";
+
+
+    particula.style.top =
+        arriba + "vh";
+
+
+    document.body.appendChild(
+        particula
+    );
+
+
+    setTimeout(
+        () => {
+
+            particula.remove();
+
+        },
+        3000
+    );
+
+}
+
+
+
+/* =========================================================
+   INICIAR PARTÍCULAS
+========================================================= */
+
+setInterval(
+    () => {
+
+        crearParticula();
+
+    },
+    2200
+);
