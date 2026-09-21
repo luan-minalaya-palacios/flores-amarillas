@@ -13,8 +13,11 @@
 
 <body>
 
-    <!-- PORTADA -->
-    <section class="portada">
+    <!-- =========================
+         ESCENA 1 - PORTADA
+    ========================== -->
+
+    <section id="portada" class="pantalla portada">
 
         <div class="contenido-portada">
 
@@ -36,13 +39,96 @@
                 Preparé algo especial para ti...
             </p>
 
-            <button class="boton-comenzar">
+            <button
+                id="btnComenzar"
+                class="boton-comenzar"
+            >
                 🌻 Comenzar
             </button>
 
         </div>
 
     </section>
+
+
+    <!-- =========================
+         ESCENA 2 - LA SEMILLA
+    ========================== -->
+
+    <section id="semilla" class="pantalla escena-semilla">
+
+        <div class="contenido-semilla">
+
+            <h2>
+                Todo comienza con algo pequeño...
+            </h2>
+
+            <p class="texto-semilla">
+                Algunas cosas hermosas necesitan tiempo para crecer.
+            </p>
+
+
+            <!-- SOL -->
+
+            <div class="sol">
+                ☀️
+            </div>
+
+
+            <!-- JARDÍN -->
+
+            <div class="jardin">
+
+                <div class="tierra"></div>
+
+                <!-- SEMILLA -->
+
+                <div class="semilla-planta">
+
+                    <div class="semilla"></div>
+
+                    <div class="tallo"></div>
+
+                    <div class="hoja hoja-izquierda"></div>
+
+                    <div class="hoja hoja-derecha"></div>
+
+                    <div class="flor">
+
+                        <div class="centro-flor">
+                            🌻
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <p
+                id="mensajeFlor"
+                class="mensaje-flor"
+            >
+                Y poco a poco... comenzó a florecer. 🌻
+            </p>
+
+
+            <button
+                id="btnRecuerdo"
+                class="boton-siguiente"
+            >
+                💛 Continuar
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- JavaScript -->
+
+    <script src="js/script.js"></script>
 
 </body>
 
