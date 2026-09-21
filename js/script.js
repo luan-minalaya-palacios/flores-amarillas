@@ -1,7 +1,33 @@
-function abrirMensaje() {
+const botonComenzar =
+    document.getElementById("btnComenzar");
 
-    const mensaje = document.getElementById("mensaje");
+const botonRecuerdo =
+    document.getElementById("btnRecuerdo");
 
-    mensaje.style.display = "block";
 
-}
+/* =========================
+   BOTÓN COMENZAR
+========================= */
+
+botonComenzar.addEventListener("click", () => {
+
+    document
+        .getElementById("semilla")
+        .scrollIntoView({
+            behavior: "smooth"
+        });
+
+});
+
+
+/* =========================
+   BOTÓN CONTINUAR
+========================= */
+
+botonRecuerdo.addEventListener("click", () => {
+
+    alert(
+        "Aquí aparecerá nuestro recuerdo especial 💛"
+    );
+
+});
