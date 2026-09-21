@@ -1,6 +1,6 @@
-/* =========================
+/* =========================================================
    CONFIGURACIÓN GENERAL
-========================= */
+========================================================= */
 
 * {
     margin: 0;
@@ -8,35 +8,51 @@
     box-sizing: border-box;
 }
 
+
 html {
     scroll-behavior: smooth;
 }
 
+
 body {
-    font-family: Georgia, "Times New Roman", serif;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
     overflow-x: hidden;
+
+    background: #fff8d8;
 }
 
+
 .pantalla {
+
     min-height: 100vh;
 
     display: flex;
+
     justify-content: center;
+
     align-items: center;
 
     position: relative;
+
 }
 
 
-/* =========================
+
+/* =========================================================
    PORTADA
-========================= */
+========================================================= */
 
 .portada {
 
     text-align: center;
 
     background:
+
         radial-gradient(
             circle at 50% 20%,
             #fffdf0 0%,
@@ -46,19 +62,29 @@ body {
         );
 
     overflow: hidden;
+
 }
+
 
 .contenido-portada {
 
     display: flex;
+
     flex-direction: column;
+
     align-items: center;
 
     width: 90%;
+
     max-width: 650px;
 
-    animation: aparecer 1.5s ease;
+    animation:
+        aparecer
+        1.5s
+        ease;
+
 }
+
 
 .flores-superiores {
 
@@ -68,8 +94,14 @@ body {
 
     margin-bottom: 10px;
 
-    animation: flotar 3s ease-in-out infinite;
+    animation:
+        flotar
+        3s
+        ease-in-out
+        infinite;
+
 }
+
 
 .hello-kitty {
 
@@ -80,40 +112,77 @@ body {
     border-radius: 30px;
 
     box-shadow:
-        0 15px 35px rgba(120, 80, 0, 0.18);
+
+        0 15px 35px
+        rgba(
+            120,
+            80,
+            0,
+            0.18
+        );
 
     margin-bottom: 25px;
 
-    animation: entrada-gatita 1.4s ease;
+    animation:
+        entrada-gatita
+        1.4s
+        ease;
+
 }
+
 
 h1 {
 
-    font-size: clamp(2.5rem, 7vw, 4.5rem);
+    font-size:
+
+        clamp(
+            2.5rem,
+            7vw,
+            4.5rem
+        );
 
     color: #7b5200;
 
     margin-bottom: 15px;
 
     text-shadow:
-        2px 2px 0 rgba(255, 255, 255, 0.6);
+
+        2px 2px 0
+        rgba(
+            255,
+            255,
+            255,
+            0.6
+        );
+
 }
+
 
 .subtitulo {
 
-    font-size: clamp(1.1rem, 3vw, 1.5rem);
+    font-size:
+
+        clamp(
+            1.1rem,
+            3vw,
+            1.5rem
+        );
 
     color: #765c20;
 
     margin-bottom: 35px;
+
 }
+
 
 .boton-comenzar,
 .boton-siguiente {
 
     border: none;
 
-    padding: 17px 38px;
+    padding:
+        17px
+        38px;
 
     border-radius: 50px;
 
@@ -121,7 +190,10 @@ h1 {
 
     color: white;
 
-    font-family: Georgia, "Times New Roman", serif;
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
 
     font-size: 1.15rem;
 
@@ -130,111 +202,187 @@ h1 {
     cursor: pointer;
 
     box-shadow:
-        0 8px 20px rgba(160, 110, 0, 0.25);
 
-    transition: 0.3s ease;
+        0 8px 20px
+        rgba(
+            160,
+            110,
+            0,
+            0.25
+        );
+
+    transition:
+        0.3s ease;
+
 }
+
 
 .boton-comenzar:hover,
 .boton-siguiente:hover {
 
-    transform: translateY(-4px) scale(1.04);
+    transform:
+        translateY(-4px)
+        scale(1.04);
 
     background: #e9a900;
 
     box-shadow:
-        0 12px 25px rgba(160, 110, 0, 0.35);
+
+        0 12px 25px
+        rgba(
+            160,
+            110,
+            0.35
+        );
+
 }
 
 
-/* =========================
-   ESCENA SEMILLA
-========================= */
+
+/* =========================================================
+   ESCENA 2 - JARDÍN
+========================================================= */
 
 .escena-semilla {
 
     background:
-        linear-gradient(
-            to bottom,
-            #fff7c7 0%,
-            #e8f6d5 55%,
-            #a9d978 100%
+
+        radial-gradient(
+            circle at 50% 15%,
+            #fffef1 0%,
+            #fff5c4 30%,
+            #e8f4c9 65%,
+            #b7df8b 100%
         );
 
     overflow: hidden;
 
     text-align: center;
+
 }
+
 
 .contenido-semilla {
 
-    width: 90%;
+    width: 92%;
 
-    max-width: 850px;
+    max-width: 1100px;
 
     position: relative;
+
+    padding-top: 35px;
+
 }
+
+
+
+/* =========================================================
+   TITULO
+========================================================= */
 
 .contenido-semilla h2 {
 
-    font-size: clamp(
-        2rem,
-        5vw,
-        3.5rem
-    );
+    font-size:
 
-    color: #735000;
+        clamp(
+            2.2rem,
+            5vw,
+            4rem
+        );
+
+    color: #704900;
 
     margin-bottom: 15px;
+
+    text-shadow:
+
+        2px 2px 0
+        rgba(
+            255,
+            255,
+            255,
+            0.7
+        );
+
+    position: relative;
+
+    z-index: 5;
+
 }
+
 
 .texto-semilla {
 
-    font-size: 1.2rem;
+    font-size:
+
+        clamp(
+            1rem,
+            2vw,
+            1.3rem
+        );
 
     color: #6c6535;
 
-    margin-bottom: 35px;
+    margin-bottom: 10px;
+
+    position: relative;
+
+    z-index: 5;
+
 }
 
 
-/* =========================
+
+/* =========================================================
    SOL
-========================= */
+========================================================= */
 
 .sol {
 
     position: absolute;
 
-    top: 40px;
+    top: 35px;
 
-    right: 8%;
+    right: 7%;
 
     font-size: 4rem;
 
-    animation: sol-flotar 4s ease-in-out infinite;
+    animation:
+
+        sol-flotar
+        4s
+        ease-in-out
+        infinite;
+
+    z-index: 2;
+
 }
 
 
-/* =========================
+
+/* =========================================================
    JARDÍN
-========================= */
+========================================================= */
 
 .jardin {
 
     position: relative;
 
-    height: 390px;
-
     width: 100%;
 
-    margin-top: 30px;
+    height: 470px;
+
+    margin-top: 10px;
+
+    overflow: hidden;
+
 }
 
 
-/* =========================
+
+/* =========================================================
    TIERRA
-========================= */
+========================================================= */
 
 .tierra {
 
@@ -242,49 +390,161 @@ h1 {
 
     bottom: 0;
 
-    left: 0;
+    left: 3%;
 
-    width: 100%;
+    width: 94%;
 
-    height: 100px;
+    height: 125px;
 
     background:
+
+        radial-gradient(
+            circle at 20% 35%,
+            #a96b36 0 4px,
+            transparent 5px
+        ),
+
+        radial-gradient(
+            circle at 70% 25%,
+            #80502b 0 5px,
+            transparent 6px
+        ),
+
+        radial-gradient(
+            circle at 45% 65%,
+            #6f4324 0 4px,
+            transparent 5px
+        ),
+
         linear-gradient(
             to bottom,
-            #9a673b,
-            #704526
+            #9b6033,
+            #704322
         );
 
     border-radius:
-        50% 50% 0 0;
+
+        50%
+        50%
+        8px
+        8px;
+
+    box-shadow:
+
+        0 -8px 20px
+        rgba(
+            80,
+            45,
+            15,
+            0.15
+        );
+
+    z-index: 1;
+
 }
 
 
-/* =========================
-   PLANTA
-========================= */
 
-.semilla-planta {
+/* =========================================================
+   PIEDRAS
+========================================================= */
+
+.piedra {
 
     position: absolute;
 
-    bottom: 55px;
+    background: #6f4b30;
 
-    left: 50%;
+    border-radius: 50%;
 
-    transform: translateX(-50%);
+    opacity: 0.8;
 
-    width: 250px;
-
-    height: 350px;
 }
 
 
-/* =========================
-   SEMILLA
-========================= */
+.piedra-1 {
 
-.semilla {
+    width: 18px;
+
+    height: 11px;
+
+    left: 20%;
+
+    top: 25px;
+
+}
+
+
+.piedra-2 {
+
+    width: 12px;
+
+    height: 8px;
+
+    left: 65%;
+
+    top: 45px;
+
+}
+
+
+.piedra-3 {
+
+    width: 20px;
+
+    height: 12px;
+
+    left: 48%;
+
+    top: 65px;
+
+}
+
+
+.piedra-4 {
+
+    width: 14px;
+
+    height: 9px;
+
+    left: 80%;
+
+    top: 20px;
+
+}
+
+
+
+/* =========================================================
+   PLANTA
+========================================================= */
+
+.planta {
+
+    position: absolute;
+
+    left: 50%;
+
+    bottom: 95px;
+
+    width: 330px;
+
+    height: 350px;
+
+    transform:
+        translateX(-50%);
+
+    z-index: 3;
+
+}
+
+
+
+/* =========================================================
+   TALLO
+========================================================= */
+
+.tallo {
 
     position: absolute;
 
@@ -292,44 +552,17 @@ h1 {
 
     left: 50%;
 
-    width: 35px;
-
-    height: 25px;
-
-    background: #5b381e;
-
-    border-radius: 50%;
-
-    transform:
-        translateX(-50%);
-
-    animation:
-        crecer-semilla 2s
-        ease forwards;
-}
-
-
-/* =========================
-   TALLO
-========================= */
-
-.tallo {
-
-    position: absolute;
-
-    bottom: 10px;
-
-    left: 50%;
-
-    width: 18px;
+    width: 20px;
 
     height: 0;
 
     background:
+
         linear-gradient(
             to right,
-            #4c8a2a,
-            #77b83f
+            #3f7d25,
+            #65a82f,
+            #3f7d25
         );
 
     border-radius: 20px;
@@ -338,99 +571,520 @@ h1 {
         translateX(-50%);
 
     animation:
-        crecer-tallo 4s
-        ease 2s forwards;
+
+        crecer-tallo
+        4s
+        ease
+        1.5s
+        forwards;
+
 }
 
 
-/* =========================
+
+/* =========================================================
    HOJAS
-========================= */
+========================================================= */
 
 .hoja {
 
     position: absolute;
 
-    width: 70px;
+    width: 105px;
 
-    height: 35px;
+    height: 55px;
 
-    background: #67a936;
+    background:
+
+        linear-gradient(
+            135deg,
+            #79b83c,
+            #3f8a27
+        );
 
     border-radius:
-        100% 0 100% 0;
+
+        100%
+        0
+        100%
+        0;
 
     opacity: 0;
 
-    transform-origin: bottom;
+    box-shadow:
+
+        0 5px 10px
+        rgba(
+            50,
+            90,
+            20,
+            0.18
+        );
+
 }
+
 
 .hoja-izquierda {
 
-    left: 45px;
+    left: 35px;
 
-    bottom: 100px;
+    bottom: 120px;
 
-    transform: rotate(-25deg);
+    transform:
+        rotate(-25deg);
 
     animation:
-        aparecer-hoja 1s
-        ease 5.5s forwards;
+
+        aparecer-hoja
+        1s
+        ease
+        5s
+        forwards;
+
 }
+
 
 .hoja-derecha {
 
-    right: 45px;
+    right: 35px;
 
-    bottom: 145px;
+    bottom: 175px;
 
-    transform: scaleX(-1) rotate(-25deg);
+    transform:
+        scaleX(-1)
+        rotate(-25deg);
 
     animation:
-        aparecer-hoja 1s
-        ease 6.5s forwards;
+
+        aparecer-hoja
+        1s
+        ease
+        6s
+        forwards;
+
 }
 
 
-/* =========================
-   FLOR
-========================= */
 
-.flor {
+/* =========================================================
+   GIRASOL
+========================================================= */
+
+.girasol {
 
     position: absolute;
 
     left: 50%;
 
-    top: -15px;
+    top: -5px;
+
+    width: 230px;
+
+    height: 230px;
 
     transform:
+
         translateX(-50%)
         scale(0);
 
     opacity: 0;
 
     animation:
-        florecer 2s
-        ease 8s forwards;
+
+        florecer-real
+        2.5s
+        cubic-bezier(
+            .17,
+            .67,
+            .35,
+            1.3
+        )
+        7s
+        forwards;
+
 }
-.centro-flor {
 
-    font-size: 160px;
 
-    filter:
-        drop-shadow(
-            0 10px 15px
-            rgba(80, 50, 0, 0.25)
+
+/* =========================================================
+   PÉTALOS
+========================================================= */
+
+.petalos {
+
+    position: absolute;
+
+    width: 100%;
+
+    height: 100%;
+
+    left: 0;
+
+    top: 0;
+
+}
+
+
+.petalos span {
+
+    position: absolute;
+
+    left: 50%;
+
+    top: 50%;
+
+    width: 58px;
+
+    height: 105px;
+
+    background:
+
+        linear-gradient(
+            to bottom,
+            #ffd83d,
+            #f5a900
         );
 
-    display: inline-block;
+    border-radius:
+
+        50%
+        50%
+        45%
+        45%;
+
+    transform-origin:
+
+        50%
+        100%;
+
+    box-shadow:
+
+        inset
+        0 -8px 8px
+        rgba(
+            190,
+            110,
+            0,
+            0.12
+        );
+
 }
 
 
-/* =========================
-   MENSAJE FINAL
-========================= */
+
+/* =========================================================
+   ROTACIÓN DE PÉTALOS
+========================================================= */
+
+.petalos span:nth-child(1) {
+
+    transform:
+        translate(-50%,-100%)
+        rotate(0deg);
+
+}
+
+
+.petalos span:nth-child(2) {
+
+    transform:
+        translate(-50%,-100%)
+        rotate(30deg);
+
+}
+
+
+.petalos span:nth-child(3) {
+
+    transform:
+        translate(-50%,-100%)
+        rotate(60deg);
+
+}
+
+
+.petalos span:nth-child(4) {
+
+    transform:
+        translate(-50%,-100%)
+        rotate(90deg);
+
+}
+
+
+.petalos span:nth-child(5) {
+
+    transform:
+        translate(-50%,-100%)
+        rotate(120deg);
+
+}
+
+
+.petalos span:nth-child(6) {
+
+    transform:
+        translate(-50%,-100%)
+        rotate(150deg);
+
+}
+
+
+.petalos span:nth-child(7) {
+
+    transform:
+        translate(-50%,-100%)
+        rotate(180deg);
+
+}
+
+
+.petalos span:nth-child(8) {
+
+    transform:
+        translate(-50%,-100%)
+        rotate(210deg);
+
+}
+
+
+.petalos span:nth-child(9) {
+
+    transform:
+        translate(-50%,-100%)
+        rotate(240deg);
+
+}
+
+
+.petalos span:nth-child(10) {
+
+    transform:
+        translate(-50%,-100%)
+        rotate(270deg);
+
+}
+
+
+.petalos span:nth-child(11) {
+
+    transform:
+        translate(-50%,-100%)
+        rotate(300deg);
+
+}
+
+
+.petalos span:nth-child(12) {
+
+    transform:
+        translate(-50%,-100%)
+        rotate(330deg);
+
+}
+
+
+
+/* =========================================================
+   CENTRO DEL GIRASOL
+========================================================= */
+
+.centro-girasol {
+
+    position: absolute;
+
+    left: 50%;
+
+    top: 50%;
+
+    width: 105px;
+
+    height: 105px;
+
+    transform:
+        translate(-50%,-50%);
+
+    border-radius: 50%;
+
+    background:
+
+        radial-gradient(
+            circle at 35% 30%,
+            #9b612f,
+            #5a321c 70%
+        );
+
+    box-shadow:
+
+        inset
+        0 5px 10px
+        rgba(
+            255,
+            190,
+            70,
+            0.2
+        ),
+
+        0 8px 12px
+        rgba(
+            80,
+            45,
+            15,
+            0.25
+        );
+
+    z-index: 5;
+
+}
+
+
+
+/* =========================================================
+   SEMILLAS DEL CENTRO
+========================================================= */
+
+.semillas-centro {
+
+    position: absolute;
+
+    inset: 15px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            4,
+            1fr
+        );
+
+    gap: 5px;
+
+    align-items: center;
+
+    justify-items: center;
+
+}
+
+
+.semillas-centro i {
+
+    width: 7px;
+
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: #d18a28;
+
+}
+
+
+
+/* =========================================================
+   PEQUEÑOS BROTES
+========================================================= */
+
+.brote {
+
+    position: absolute;
+
+    bottom: 95px;
+
+    width: 80px;
+
+    height: 100px;
+
+    z-index: 2;
+
+}
+
+
+.brote-izquierdo {
+
+    left: 15%;
+
+}
+
+
+.brote-derecho {
+
+    right: 15%;
+
+}
+
+
+.mini-tallo {
+
+    position: absolute;
+
+    bottom: 0;
+
+    left: 50%;
+
+    width: 8px;
+
+    height: 60px;
+
+    background: #5b982d;
+
+    border-radius: 10px;
+
+    transform:
+        translateX(-50%);
+
+}
+
+
+.mini-hoja {
+
+    position: absolute;
+
+    width: 40px;
+
+    height: 22px;
+
+    background: #65a936;
+
+    border-radius:
+
+        100%
+        0
+        100%
+        0;
+
+}
+
+
+.mini-hoja-1 {
+
+    left: 2px;
+
+    bottom: 30px;
+
+    transform:
+        rotate(-25deg);
+
+}
+
+
+.mini-hoja-2 {
+
+    right: 2px;
+
+    bottom: 45px;
+
+    transform:
+
+        scaleX(-1)
+        rotate(-25deg);
+
+}
+
+
+
+/* =========================================================
+   MENSAJE
+========================================================= */
 
 .mensaje-flor {
 
@@ -440,213 +1094,387 @@ h1 {
 
     color: #70520a;
 
-    margin-top: 10px;
+    margin-top: 5px;
+
+    position: relative;
+
+    z-index: 5;
 
     animation:
-        aparecer-mensaje 2s
-        ease 10s forwards;
+
+        aparecer-mensaje
+        2s
+        ease
+        9.5s
+        forwards;
+
 }
 
 
-/* =========================
+
+/* =========================================================
    BOTÓN SIGUIENTE
-========================= */
+========================================================= */
 
 .boton-siguiente {
 
     opacity: 0;
 
-    margin-top: 25px;
+    margin-top: 22px;
+
+    position: relative;
+
+    z-index: 5;
 
     animation:
-        aparecer-mensaje 2s
-        ease 11s forwards;
+
+        aparecer-mensaje
+        2s
+        ease
+        10.5s
+        forwards;
+
 }
 
 
-/* =========================
+
+/* =========================================================
    ANIMACIONES
-========================= */
+========================================================= */
 
 @keyframes aparecer {
 
     from {
+
         opacity: 0;
-        transform: translateY(30px);
+
+        transform:
+            translateY(30px);
+
     }
 
     to {
+
         opacity: 1;
-        transform: translateY(0);
+
+        transform:
+            translateY(0);
+
     }
+
 }
+
 
 
 @keyframes entrada-gatita {
 
     from {
+
         opacity: 0;
+
         transform:
-            scale(0.7)
+
+            scale(.7)
             translateY(30px);
+
     }
 
     to {
+
         opacity: 1;
+
         transform:
+
             scale(1)
             translateY(0);
+
     }
+
 }
+
 
 
 @keyframes flotar {
 
     0%,
     100% {
+
         transform:
             translateY(0);
+
     }
 
     50% {
+
         transform:
             translateY(-8px);
+
     }
+
 }
+
 
 
 @keyframes sol-flotar {
 
     0%,
     100% {
+
         transform:
             translateY(0);
+
     }
 
     50% {
+
         transform:
             translateY(-15px);
+
     }
+
 }
 
-
-@keyframes crecer-semilla {
-
-    0% {
-        transform:
-            translateX(-50%)
-            scale(0.5);
-    }
-
-    100% {
-        transform:
-            translateX(-50%)
-            scale(1);
-    }
-}
 
 
 @keyframes crecer-tallo {
 
     from {
+
         height: 0;
+
     }
 
     to {
-        height: 250px;
+
+        height: 300px;
+
     }
+
 }
+
 
 
 @keyframes aparecer-hoja {
 
     from {
+
         opacity: 0;
 
         transform:
+
             scale(0)
             rotate(-25deg);
+
     }
 
     to {
+
         opacity: 1;
 
         transform:
+
             scale(1)
             rotate(-25deg);
+
     }
+
 }
 
 
-@keyframes florecer {
+
+@keyframes florecer-real {
 
     0% {
+
         opacity: 0;
 
         transform:
+
             translateX(-50%)
-            scale(0);
+            scale(0)
+            rotate(-20deg);
+
     }
 
-    70% {
-        transform:
-            translateX(-50%)
-            scale(1.2);
-    }
+    60% {
 
-    100% {
         opacity: 1;
 
         transform:
+
             translateX(-50%)
-            scale(1);
+            scale(1.15)
+            rotate(5deg);
+
     }
+
+    100% {
+
+        opacity: 1;
+
+        transform:
+
+            translateX(-50%)
+            scale(1)
+            rotate(0deg);
+
+    }
+
 }
+
 
 
 @keyframes aparecer-mensaje {
 
     from {
+
         opacity: 0;
 
         transform:
             translateY(15px);
+
     }
 
     to {
+
         opacity: 1;
 
         transform:
             translateY(0);
+
     }
+
 }
 
 
-/* =========================
+
+/* =========================================================
    CELULARES
-========================= */
+========================================================= */
 
 @media (max-width: 600px) {
 
+
     .hello-kitty {
+
         width: 190px;
+
     }
+
 
     .flores-superiores {
+
         font-size: 1.6rem;
+
     }
+
+
+    .contenido-semilla h2 {
+
+        font-size: 2rem;
+
+    }
+
+
+    .texto-semilla {
+
+        font-size: 1rem;
+
+    }
+
 
     .jardin {
-        height: 330px;
+
+        height: 390px;
+
     }
+
 
     .sol {
-        font-size: 3rem;
-        top: 20px;
+
+        font-size: 2.7rem;
+
+        top: 15px;
+
+        right: 3%;
+
     }
 
-    .centro-flor {
-        font-size: 75px;
+
+    .planta {
+
+        width: 250px;
+
+        height: 290px;
+
+    }
+
+
+    .girasol {
+
+        width: 180px;
+
+        height: 180px;
+
+    }
+
+
+    .petalos span {
+
+        width: 45px;
+
+        height: 80px;
+
+    }
+
+
+    .centro-girasol {
+
+        width: 82px;
+
+        height: 82px;
+
+    }
+
+
+    .hoja {
+
+        width: 80px;
+
+        height: 42px;
+
+    }
+
+
+    .tierra {
+
+        left: 0;
+
+        width: 100%;
+
+        height: 105px;
+
+    }
+
+
+    .brote-izquierdo {
+
+        left: 5%;
+
+    }
+
+
+    .brote-derecho {
+
+        right: 5%;
+
+    }
+
+
+    .mensaje-flor {
+
+        font-size: 1.1rem;
+
     }
 
 }
