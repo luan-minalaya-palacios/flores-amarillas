@@ -1,33 +1,8 @@
 /* =========================================================
-   CONFIGURACIÓN GENERAL
+   ESCENA 7 - JARDÍN FINAL
 ========================================================= */
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-
-html {
-    scroll-behavior: smooth;
-}
-
-
-body {
-
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
-    overflow-x: hidden;
-
-    background: #fff8d8;
-}
-
-
-.pantalla {
+.escena-final-jardin {
 
     min-height: 100vh;
 
@@ -37,695 +12,341 @@ body {
 
     align-items: center;
 
-    position: relative;
-
-}
-
-
-
-/* =========================================================
-   PORTADA
-========================================================= */
-
-.portada {
-
     text-align: center;
+
+    position: relative;
 
     background:
 
         radial-gradient(
-            circle at 50% 20%,
-            #fffdf0 0%,
-            #fff4b8 35%,
-            #ffe27a 70%,
-            #ffd45c 100%
+            circle at 50% 30%,
+            rgba(255, 220, 111, 0.20),
+            transparent 30%
+        ),
+
+        linear-gradient(
+            180deg,
+            #101827 0%,
+            #192b27 50%,
+            #273b25 100%
         );
 
-    overflow: hidden;
-
+    color: white;
 }
 
 
-.contenido-portada {
+.contenido-final-jardin {
+
+    position: relative;
+
+    width: 100%;
+
+    max-width: 1000px;
+
+    min-height: 100vh;
+
+    padding:
+        70px 20px 40px;
 
     display: flex;
 
     flex-direction: column;
 
+    justify-content: center;
+
     align-items: center;
-
-    width: 90%;
-
-    max-width: 650px;
-
-    animation:
-        aparecer
-        1.5s
-        ease;
-
 }
 
 
-.flores-superiores {
-
-    font-size: 2.2rem;
-
-    letter-spacing: 12px;
-
-    margin-bottom: 10px;
-
-    animation:
-        flotar
-        3s
-        ease-in-out
-        infinite;
-
-}
-
-
-.hello-kitty {
-
-    width: 230px;
-
-    max-width: 65vw;
-
-    border-radius: 30px;
-
-    box-shadow:
-
-        0 15px 35px
-        rgba(
-            120,
-            80,
-            0,
-            0.18
-        );
-
-    margin-bottom: 25px;
-
-    animation:
-        entrada-gatita
-        1.4s
-        ease;
-
-}
-
-
-h1 {
-
-    font-size:
-
-        clamp(
-            2.5rem,
-            7vw,
-            4.5rem
-        );
-
-    color: #7b5200;
-
-    margin-bottom: 15px;
-
-    text-shadow:
-
-        2px 2px 0
-        rgba(
-            255,
-            255,
-            255,
-            0.6
-        );
-
-}
-
-
-.subtitulo {
-
-    font-size:
-
-        clamp(
-            1.1rem,
-            3vw,
-            1.5rem
-        );
-
-    color: #765c20;
-
-    margin-bottom: 35px;
-
-}
-
-
-.boton-comenzar,
-.boton-siguiente {
-
-    border: none;
-
-    padding:
-        17px
-        38px;
-
-    border-radius: 50px;
-
-    background: #f5b900;
-
-    color: white;
-
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
-    font-size: 1.15rem;
-
-    font-weight: bold;
-
-    cursor: pointer;
-
-    box-shadow:
-
-        0 8px 20px
-        rgba(
-            160,
-            110,
-            0,
-            0.25
-        );
-
-    transition:
-        0.3s ease;
-
-}
-
-
-.boton-comenzar:hover,
-.boton-siguiente:hover {
-
-    transform:
-        translateY(-4px)
-        scale(1.04);
-
-    background: #e9a900;
-
-    box-shadow:
-
-        0 12px 25px
-        rgba(
-            160,
-            110,
-            0.35
-        );
-
-}
-
-
-
-/* =========================================================
-   ESCENA 2 - JARDÍN
-========================================================= */
-
-.escena-semilla {
-
-    background:
-
-        radial-gradient(
-            circle at 50% 15%,
-            #fffef1 0%,
-            #fff5c4 30%,
-            #e8f4c9 65%,
-            #b7df8b 100%
-        );
-
-    overflow: hidden;
-
-    text-align: center;
-
-}
-
-
-.contenido-semilla {
-
-    width: 92%;
-
-    max-width: 1100px;
-
-    position: relative;
-
-    padding-top: 35px;
-
-}
-
-
-
-/* =========================================================
-   TITULO
-========================================================= */
-
-.contenido-semilla h2 {
-
-    font-size:
-
-        clamp(
-            2.2rem,
-            5vw,
-            4rem
-        );
-
-    color: #704900;
-
-    margin-bottom: 15px;
-
-    text-shadow:
-
-        2px 2px 0
-        rgba(
-            255,
-            255,
-            255,
-            0.7
-        );
-
-    position: relative;
-
-    z-index: 5;
-
-}
-
-
-.texto-semilla {
-
-    font-size:
-
-        clamp(
-            1rem,
-            2vw,
-            1.3rem
-        );
-
-    color: #6c6535;
-
-    margin-bottom: 10px;
-
-    position: relative;
-
-    z-index: 5;
-
-}
-
-
-
-/* =========================================================
-   SOL
-========================================================= */
-
-.sol {
+.luna {
 
     position: absolute;
 
-    top: 35px;
+    top: 45px;
 
-    right: 7%;
+    right: 8%;
 
-    font-size: 4rem;
+    font-size: 70px;
+
+    opacity: 0.85;
 
     animation:
-
-        sol-flotar
-        4s
-        ease-in-out
-        infinite;
-
-    z-index: 2;
-
+        flotar 5s ease-in-out infinite;
 }
 
 
+.estrellas {
 
-/* =========================================================
-   JARDÍN
-========================================================= */
+    position: absolute;
 
-.jardin {
+    inset: 0;
+
+    pointer-events: none;
+}
+
+
+.estrellas span {
+
+    position: absolute;
+
+    color: #ffe89a;
+
+    font-size: 18px;
+
+    animation:
+        brilloFinal 3s ease-in-out infinite;
+}
+
+
+.estrellas span:nth-child(1) {
+    left: 10%;
+    top: 20%;
+}
+
+.estrellas span:nth-child(2) {
+    left: 22%;
+    top: 13%;
+}
+
+.estrellas span:nth-child(3) {
+    left: 35%;
+    top: 22%;
+}
+
+.estrellas span:nth-child(4) {
+    right: 30%;
+    top: 16%;
+}
+
+.estrellas span:nth-child(5) {
+    right: 18%;
+    top: 27%;
+}
+
+.estrellas span:nth-child(6) {
+    left: 8%;
+    top: 42%;
+}
+
+.estrellas span:nth-child(7) {
+    right: 8%;
+    top: 44%;
+}
+
+.estrellas span:nth-child(8) {
+    left: 28%;
+    top: 38%;
+}
+
+.estrellas span:nth-child(9) {
+    right: 38%;
+    top: 10%;
+}
+
+
+.escena-final-jardin h2 {
 
     position: relative;
 
-    width: 100%;
+    z-index: 3;
 
-    height: 470px;
+    max-width: 800px;
 
-    margin-top: 10px;
+    font-size:
+        clamp(30px, 5vw, 52px);
 
-    overflow: hidden;
+    color: #fff0a6;
 
+    margin-bottom: 15px;
+}
+
+
+.texto-final-jardin {
+
+    position: relative;
+
+    z-index: 3;
+
+    max-width: 650px;
+
+    font-size: 18px;
+
+    line-height: 1.7;
+
+    color: #d7dcc4;
+
+    margin-bottom: 15px;
 }
 
 
 
 /* =========================================================
-   TIERRA
+   JARDÍN FINAL
 ========================================================= */
 
-.tierra {
+.jardin-final {
+
+    position: relative;
+
+    width: 650px;
+
+    max-width: 95vw;
+
+    height: 390px;
+
+    margin-top: 10px;
+}
+
+
+.tierra-final {
 
     position: absolute;
 
     bottom: 0;
 
-    left: 3%;
+    left: 50%;
 
-    width: 94%;
+    transform:
+        translateX(-50%);
 
-    height: 125px;
+    width: 100%;
+
+    height: 90px;
+
+    border-radius:
+        50% 50% 0 0;
 
     background:
 
         radial-gradient(
-            circle at 20% 35%,
-            #a96b36 0 4px,
-            transparent 5px
-        ),
-
-        radial-gradient(
-            circle at 70% 25%,
-            #80502b 0 5px,
+            circle at 20% 40%,
+            #76502c 0 5px,
             transparent 6px
         ),
 
         radial-gradient(
-            circle at 45% 65%,
-            #6f4324 0 4px,
-            transparent 5px
+            circle at 70% 50%,
+            #53351f 0 5px,
+            transparent 6px
         ),
 
         linear-gradient(
-            to bottom,
-            #9b6033,
-            #704322
+            180deg,
+            #674523,
+            #352417
         );
-
-    border-radius:
-
-        50%
-        50%
-        8px
-        8px;
-
-    box-shadow:
-
-        0 -8px 20px
-        rgba(
-            80,
-            45,
-            15,
-            0.15
-        );
-
-    z-index: 1;
-
 }
 
 
 
 /* =========================================================
-   PIEDRAS
+   TALLOS FINALES
 ========================================================= */
 
-.piedra {
+.tallo-final {
 
     position: absolute;
 
-    background: #6f4b30;
+    bottom: 60px;
 
-    border-radius: 50%;
-
-    opacity: 0.8;
-
-}
-
-
-.piedra-1 {
-
-    width: 18px;
-
-    height: 11px;
-
-    left: 20%;
-
-    top: 25px;
-
-}
-
-
-.piedra-2 {
-
-    width: 12px;
-
-    height: 8px;
-
-    left: 65%;
-
-    top: 45px;
-
-}
-
-
-.piedra-3 {
-
-    width: 20px;
-
-    height: 12px;
-
-    left: 48%;
-
-    top: 65px;
-
-}
-
-
-.piedra-4 {
-
-    width: 14px;
-
-    height: 9px;
-
-    left: 80%;
-
-    top: 20px;
-
-}
-
-
-
-/* =========================================================
-   PLANTA
-========================================================= */
-
-.planta {
-
-    position: absolute;
-
-    left: 50%;
-
-    bottom: 95px;
-
-    width: 330px;
-
-    height: 350px;
-
-    transform:
-        translateX(-50%);
-
-    z-index: 3;
-
-}
-
-
-
-/* =========================================================
-   TALLO
-========================================================= */
-
-.tallo {
-
-    position: absolute;
-
-    bottom: 0;
-
-    left: 50%;
-
-    width: 20px;
-
-    height: 0;
-
-    background:
-
-        linear-gradient(
-            to right,
-            #3f7d25,
-            #65a82f,
-            #3f7d25
-        );
+    width: 13px;
 
     border-radius: 20px;
 
-    transform:
-        translateX(-50%);
-
-    animation:
-
-        crecer-tallo
-        4s
-        ease
-        1.5s
-        forwards;
-
-}
-
-
-
-/* =========================================================
-   HOJAS
-========================================================= */
-
-.hoja {
-
-    position: absolute;
-
-    width: 105px;
-
-    height: 55px;
-
     background:
-
         linear-gradient(
-            135deg,
-            #79b83c,
-            #3f8a27
+            90deg,
+            #365d2d,
+            #6c963e,
+            #365d2d
         );
 
-    border-radius:
+    transform-origin: bottom;
 
-        100%
-        0
-        100%
-        0;
-
-    opacity: 0;
-
-    box-shadow:
-
-        0 5px 10px
-        rgba(
-            50,
-            90,
-            20,
-            0.18
-        );
-
+    animation:
+        crecerFinal 1.8s ease forwards;
 }
 
 
-.hoja-izquierda {
+.tallo-central {
 
-    left: 35px;
+    left: 50%;
 
-    bottom: 120px;
+    height: 245px;
 
     transform:
-        rotate(-25deg);
-
-    animation:
-
-        aparecer-hoja
-        1s
-        ease
-        5s
-        forwards;
-
+        translateX(-50%)
+        scaleY(0);
 }
 
 
-.hoja-derecha {
+.tallo-izquierdo {
 
-    right: 35px;
+    left: 32%;
 
-    bottom: 175px;
+    height: 165px;
 
     transform:
-        scaleX(-1)
-        rotate(-25deg);
+        rotate(-10deg)
+        scaleY(0);
 
-    animation:
+    animation-delay: 0.5s;
+}
 
-        aparecer-hoja
-        1s
-        ease
-        6s
-        forwards;
 
+.tallo-derecho {
+
+    right: 32%;
+
+    height: 175px;
+
+    transform:
+        rotate(10deg)
+        scaleY(0);
+
+    animation-delay: 0.7s;
 }
 
 
 
 /* =========================================================
-   GIRASOL
+   GIRASOL CENTRAL
 ========================================================= */
 
-.girasol {
+.flor-central {
 
     position: absolute;
 
     left: 50%;
 
-    top: -5px;
+    bottom: 285px;
 
-    width: 230px;
+    width: 190px;
 
-    height: 230px;
+    height: 190px;
 
     transform:
-
         translateX(-50%)
         scale(0);
 
-    opacity: 0;
+    z-index: 3;
 
     animation:
-
-        florecer-real
-        2.5s
-        cubic-bezier(
-            .17,
-            .67,
-            .35,
-            1.3
-        )
-        7s
-        forwards;
-
+        aparecerFlorFinal 1.7s
+        cubic-bezier(.17,.84,.44,1)
+        1.4s forwards;
 }
 
 
-
-/* =========================================================
-   PÉTALOS
-========================================================= */
-
-.petalos {
+.petalos-final {
 
     position: absolute;
 
-    width: 100%;
-
-    height: 100%;
-
-    left: 0;
-
-    top: 0;
-
+    inset: 0;
 }
 
 
-.petalos span {
+.petalos-final span {
 
     position: absolute;
 
@@ -733,163 +354,99 @@ h1 {
 
     top: 50%;
 
-    width: 58px;
+    width: 35px;
 
-    height: 105px;
-
-    background:
-
-        linear-gradient(
-            to bottom,
-            #ffd83d,
-            #f5a900
-        );
+    height: 78px;
 
     border-radius:
+        50% 50% 45% 45%;
 
-        50%
-        50%
-        45%
-        45%;
-
-    transform-origin:
-
-        50%
-        100%;
-
-    box-shadow:
-
-        inset
-        0 -8px 8px
-        rgba(
-            190,
-            110,
-            0,
-            0.12
+    background:
+        linear-gradient(
+            180deg,
+            #ffe875,
+            #d99a13
         );
 
+    transform-origin:
+        50% 100%;
 }
 
 
-
-/* =========================================================
-   ROTACIÓN DE PÉTALOS
-========================================================= */
-
-.petalos span:nth-child(1) {
-
+.petalos-final span:nth-child(1) {
     transform:
-        translate(-50%,-100%)
+        translate(-50%, -100%)
         rotate(0deg);
-
 }
 
-
-.petalos span:nth-child(2) {
-
+.petalos-final span:nth-child(2) {
     transform:
-        translate(-50%,-100%)
+        translate(-50%, -100%)
         rotate(30deg);
-
 }
 
-
-.petalos span:nth-child(3) {
-
+.petalos-final span:nth-child(3) {
     transform:
-        translate(-50%,-100%)
+        translate(-50%, -100%)
         rotate(60deg);
-
 }
 
-
-.petalos span:nth-child(4) {
-
+.petalos-final span:nth-child(4) {
     transform:
-        translate(-50%,-100%)
+        translate(-50%, -100%)
         rotate(90deg);
-
 }
 
-
-.petalos span:nth-child(5) {
-
+.petalos-final span:nth-child(5) {
     transform:
-        translate(-50%,-100%)
+        translate(-50%, -100%)
         rotate(120deg);
-
 }
 
-
-.petalos span:nth-child(6) {
-
+.petalos-final span:nth-child(6) {
     transform:
-        translate(-50%,-100%)
+        translate(-50%, -100%)
         rotate(150deg);
-
 }
 
-
-.petalos span:nth-child(7) {
-
+.petalos-final span:nth-child(7) {
     transform:
-        translate(-50%,-100%)
+        translate(-50%, -100%)
         rotate(180deg);
-
 }
 
-
-.petalos span:nth-child(8) {
-
+.petalos-final span:nth-child(8) {
     transform:
-        translate(-50%,-100%)
+        translate(-50%, -100%)
         rotate(210deg);
-
 }
 
-
-.petalos span:nth-child(9) {
-
+.petalos-final span:nth-child(9) {
     transform:
-        translate(-50%,-100%)
+        translate(-50%, -100%)
         rotate(240deg);
-
 }
 
-
-.petalos span:nth-child(10) {
-
+.petalos-final span:nth-child(10) {
     transform:
-        translate(-50%,-100%)
+        translate(-50%, -100%)
         rotate(270deg);
-
 }
 
-
-.petalos span:nth-child(11) {
-
+.petalos-final span:nth-child(11) {
     transform:
-        translate(-50%,-100%)
+        translate(-50%, -100%)
         rotate(300deg);
-
 }
 
-
-.petalos span:nth-child(12) {
-
+.petalos-final span:nth-child(12) {
     transform:
-        translate(-50%,-100%)
+        translate(-50%, -100%)
         rotate(330deg);
-
 }
 
 
-
-/* =========================================================
-   CENTRO DEL GIRASOL
-========================================================= */
-
-.centro-girasol {
+.centro-final {
 
     position: absolute;
 
@@ -897,76 +454,31 @@ h1 {
 
     top: 50%;
 
-    width: 105px;
-
-    height: 105px;
-
     transform:
-        translate(-50%,-50%);
+        translate(-50%, -50%);
+
+    width: 88px;
+
+    height: 88px;
 
     border-radius: 50%;
 
     background:
-
         radial-gradient(
-            circle at 35% 30%,
-            #9b612f,
-            #5a321c 70%
+            circle,
+            #9b702e,
+            #432817 75%
         );
 
     box-shadow:
-
-        inset
-        0 5px 10px
-        rgba(
-            255,
-            190,
-            70,
-            0.2
-        ),
-
-        0 8px 12px
-        rgba(
-            80,
-            45,
-            15,
-            0.25
-        );
-
-    z-index: 5;
-
+        inset 0 5px 15px
+        rgba(0,0,0,0.3);
 }
 
 
-
-/* =========================================================
-   SEMILLAS DEL CENTRO
-========================================================= */
-
-.semillas-centro {
+.centro-final i {
 
     position: absolute;
-
-    inset: 15px;
-
-    display: grid;
-
-    grid-template-columns:
-        repeat(
-            4,
-            1fr
-        );
-
-    gap: 5px;
-
-    align-items: center;
-
-    justify-items: center;
-
-}
-
-
-.semillas-centro i {
 
     width: 7px;
 
@@ -974,507 +486,551 @@ h1 {
 
     border-radius: 50%;
 
-    background: #d18a28;
-
+    background: #c29438;
 }
 
 
-
-/* =========================================================
-   PEQUEÑOS BROTES
-========================================================= */
-
-.brote {
-
-    position: absolute;
-
-    bottom: 95px;
-
-    width: 80px;
-
-    height: 100px;
-
-    z-index: 2;
-
+.centro-final i:nth-child(1) {
+    left: 25%;
+    top: 22%;
 }
 
-
-.brote-izquierdo {
-
-    left: 15%;
-
-}
-
-
-.brote-derecho {
-
-    right: 15%;
-
-}
-
-
-.mini-tallo {
-
-    position: absolute;
-
-    bottom: 0;
-
+.centro-final i:nth-child(2) {
     left: 50%;
-
-    width: 8px;
-
-    height: 60px;
-
-    background: #5b982d;
-
-    border-radius: 10px;
-
-    transform:
-        translateX(-50%);
-
+    top: 15%;
 }
 
-
-.mini-hoja {
-
-    position: absolute;
-
-    width: 40px;
-
-    height: 22px;
-
-    background: #65a936;
-
-    border-radius:
-
-        100%
-        0
-        100%
-        0;
-
+.centro-final i:nth-child(3) {
+    left: 70%;
+    top: 32%;
 }
 
-
-.mini-hoja-1 {
-
-    left: 2px;
-
-    bottom: 30px;
-
-    transform:
-        rotate(-25deg);
-
+.centro-final i:nth-child(4) {
+    left: 32%;
+    top: 43%;
 }
 
+.centro-final i:nth-child(5) {
+    left: 55%;
+    top: 40%;
+}
 
-.mini-hoja-2 {
+.centro-final i:nth-child(6) {
+    left: 75%;
+    top: 55%;
+}
 
-    right: 2px;
+.centro-final i:nth-child(7) {
+    left: 25%;
+    top: 63%;
+}
 
-    bottom: 45px;
+.centro-final i:nth-child(8) {
+    left: 50%;
+    top: 70%;
+}
 
-    transform:
-
-        scaleX(-1)
-        rotate(-25deg);
-
+.centro-final i:nth-child(9) {
+    left: 68%;
+    top: 75%;
 }
 
 
 
 /* =========================================================
-   MENSAJE
+   FLORES LATERALES
 ========================================================= */
 
-.mensaje-flor {
+.flor-izquierda {
+
+    position: absolute;
+
+    left: 20%;
+
+    bottom: 190px;
+
+    font-size: 70px;
+
+    animation:
+        aparecerLateral 1.5s ease forwards;
+
+    animation-delay: 1.8s;
 
     opacity: 0;
+}
 
-    font-size: 1.35rem;
 
-    color: #70520a;
+.flor-derecha {
+
+    position: absolute;
+
+    right: 20%;
+
+    bottom: 200px;
+
+    font-size: 70px;
+
+    animation:
+        aparecerLateral 1.5s ease forwards;
+
+    animation-delay: 2s;
+
+    opacity: 0;
+}
+
+
+.petalos-pequenos {
+
+    filter:
+        drop-shadow(
+            0 0 10px
+            rgba(255, 210, 60, 0.3)
+        );
+}
+
+
+
+/* =========================================================
+   HOJAS FINALES
+========================================================= */
+
+.hoja-final {
+
+    position: absolute;
+
+    width: 90px;
+
+    height: 40px;
+
+    border-radius:
+        100% 0 100% 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            #6c963e,
+            #345d2b
+        );
+
+    z-index: 2;
+}
+
+
+.hoja-final-1 {
+
+    left: 37%;
+
+    bottom: 130px;
+
+    transform:
+        rotate(-25deg);
+}
+
+
+.hoja-final-2 {
+
+    left: 43%;
+
+    bottom: 175px;
+
+    transform:
+        rotate(210deg);
+}
+
+
+.hoja-final-3 {
+
+    right: 37%;
+
+    bottom: 135px;
+
+    transform:
+        rotate(205deg);
+}
+
+
+.hoja-final-4 {
+
+    right: 43%;
+
+    bottom: 180px;
+
+    transform:
+        rotate(-25deg);
+}
+
+
+
+/* =========================================================
+   BOTÓN FINAL
+========================================================= */
+
+.boton-final {
+
+    position: relative;
+
+    z-index: 5;
 
     margin-top: 5px;
 
-    position: relative;
-
-    z-index: 5;
-
-    animation:
-
-        aparecer-mensaje
-        2s
-        ease
-        9.5s
-        forwards;
-
-}
-
-
-
-/* =========================================================
-   BOTÓN SIGUIENTE
-========================================================= */
-
-.boton-siguiente {
-
     opacity: 0;
 
-    margin-top: 22px;
-
-    position: relative;
-
-    z-index: 5;
-
     animation:
+        aparecer 1s ease forwards;
 
-        aparecer-mensaje
-        2s
-        ease
-        10.5s
-        forwards;
-
+    animation-delay: 3.2s;
 }
 
 
 
 /* =========================================================
-   ANIMACIONES
+   ESCENA 8 - MENSAJE FINAL
 ========================================================= */
 
-@keyframes aparecer {
+.escena-mensaje-final {
 
-    from {
+    min-height: 100vh;
 
-        opacity: 0;
+    display: flex;
 
-        transform:
-            translateY(30px);
+    justify-content: center;
 
-    }
+    align-items: center;
 
-    to {
+    text-align: center;
 
-        opacity: 1;
+    background:
 
-        transform:
-            translateY(0);
+        radial-gradient(
+            circle at 50% 30%,
+            rgba(255, 239, 153, 0.9),
+            transparent 35%
+        ),
 
-    }
-
+        linear-gradient(
+            180deg,
+            #fff8ca 0%,
+            #f2df9a 50%,
+            #c7d28e 100%
+        );
 }
 
 
+.contenido-mensaje-final {
 
-@keyframes entrada-gatita {
+    width: 100%;
 
-    from {
+    max-width: 800px;
 
-        opacity: 0;
-
-        transform:
-
-            scale(.7)
-            translateY(30px);
-
-    }
-
-    to {
-
-        opacity: 1;
-
-        transform:
-
-            scale(1)
-            translateY(0);
-
-    }
-
+    padding: 60px 20px;
 }
 
 
+.flor-final-animada {
 
-@keyframes flotar {
+    font-size: 85px;
 
-    0%,
-    100% {
+    margin-bottom: 15px;
 
-        transform:
-            translateY(0);
-
-    }
-
-    50% {
-
-        transform:
-            translateY(-8px);
-
-    }
-
+    animation:
+        flotar 4s ease-in-out infinite;
 }
 
 
+.pequeno-final {
 
-@keyframes sol-flotar {
+    font-size: 16px;
 
-    0%,
-    100% {
+    text-transform: uppercase;
 
-        transform:
-            translateY(0);
+    letter-spacing: 3px;
 
-    }
+    color: #86641e;
 
-    50% {
-
-        transform:
-            translateY(-15px);
-
-    }
-
+    margin-bottom: 20px;
 }
 
 
+.escena-mensaje-final h2 {
 
-@keyframes crecer-tallo {
+    font-family:
+        Georgia,
+        serif;
 
-    from {
+    font-size:
+        clamp(32px, 6vw, 58px);
 
-        height: 0;
+    line-height: 1.15;
 
-    }
+    color: #79520c;
 
-    to {
-
-        height: 300px;
-
-    }
-
+    margin-bottom: 25px;
 }
 
 
+.linea-final {
 
-@keyframes aparecer-hoja {
+    width: 100px;
 
-    from {
+    height: 3px;
 
-        opacity: 0;
+    margin:
+        0 auto 30px;
 
-        transform:
+    border-radius: 20px;
 
-            scale(0)
-            rotate(-25deg);
-
-    }
-
-    to {
-
-        opacity: 1;
-
-        transform:
-
-            scale(1)
-            rotate(-25deg);
-
-    }
-
+    background:
+        linear-gradient(
+            90deg,
+            #d8a52b,
+            #f4da72
+        );
 }
 
 
+.mensaje-grande {
 
-@keyframes florecer-real {
+    max-width: 700px;
 
-    0% {
+    margin:
+        0 auto 22px;
 
-        opacity: 0;
+    font-family:
+        Georgia,
+        serif;
 
-        transform:
+    font-size: 19px;
 
-            translateX(-50%)
-            scale(0)
-            rotate(-20deg);
+    line-height: 1.9;
 
-    }
-
-    60% {
-
-        opacity: 1;
-
-        transform:
-
-            translateX(-50%)
-            scale(1.15)
-            rotate(5deg);
-
-    }
-
-    100% {
-
-        opacity: 1;
-
-        transform:
-
-            translateX(-50%)
-            scale(1)
-            rotate(0deg);
-
-    }
-
+    color: #5d4b29;
 }
 
 
+.mensaje-despedida {
 
-@keyframes aparecer-mensaje {
+    margin-top: 35px;
 
-    from {
+    font-size: 17px;
 
-        opacity: 0;
+    color: #755820;
+}
 
-        transform:
-            translateY(15px);
 
-    }
+.escena-mensaje-final h3 {
 
-    to {
+    margin-top: 5px;
 
-        opacity: 1;
+    font-family:
+        Georgia,
+        serif;
 
-        transform:
-            translateY(0);
+    font-size: 28px;
 
-    }
+    color: #805a13;
+}
 
+
+.flores-finales {
+
+    margin-top: 25px;
+
+    font-size: 32px;
+
+    animation:
+        flotar 4s ease-in-out infinite;
+}
+
+
+.escena-mensaje-final .boton-siguiente {
+
+    margin-top: 30px;
 }
 
 
 
 /* =========================================================
-   CELULARES
+   ANIMACIONES FINALES
+========================================================= */
+
+@keyframes crecerFinal {
+
+    from {
+        transform:
+            translateX(-50%)
+            scaleY(0);
+    }
+
+    to {
+        transform:
+            translateX(-50%)
+            scaleY(1);
+    }
+}
+
+
+@keyframes aparecerFlorFinal {
+
+    from {
+        opacity: 0;
+        transform:
+            translateX(-50%)
+            scale(0);
+    }
+
+    70% {
+        transform:
+            translateX(-50%)
+            scale(1.1);
+    }
+
+    to {
+        opacity: 1;
+        transform:
+            translateX(-50%)
+            scale(1);
+    }
+}
+
+
+@keyframes aparecerLateral {
+
+    from {
+        opacity: 0;
+        transform:
+            translateY(20px)
+            scale(0.7);
+    }
+
+    to {
+        opacity: 1;
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}
+
+
+@keyframes brilloFinal {
+
+    0%,
+    100% {
+        opacity: 0.25;
+        transform: scale(0.8);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+}
+
+
+
+/* =========================================================
+   CELULAR
 ========================================================= */
 
 @media (max-width: 600px) {
 
+    .contenido-final-jardin {
 
-    .hello-kitty {
-
-        width: 190px;
-
+        padding:
+            55px 12px 30px;
     }
 
 
-    .flores-superiores {
+    .luna {
 
-        font-size: 1.6rem;
-
-    }
-
-
-    .contenido-semilla h2 {
-
-        font-size: 2rem;
-
-    }
-
-
-    .texto-semilla {
-
-        font-size: 1rem;
-
-    }
-
-
-    .jardin {
-
-        height: 390px;
-
-    }
-
-
-    .sol {
-
-        font-size: 2.7rem;
-
-        top: 15px;
-
-        right: 3%;
-
-    }
-
-
-    .planta {
-
-        width: 250px;
-
-        height: 290px;
-
-    }
-
-
-    .girasol {
-
-        width: 180px;
-
-        height: 180px;
-
-    }
-
-
-    .petalos span {
-
-        width: 45px;
-
-        height: 80px;
-
-    }
-
-
-    .centro-girasol {
-
-        width: 82px;
-
-        height: 82px;
-
-    }
-
-
-    .hoja {
-
-        width: 80px;
-
-        height: 42px;
-
-    }
-
-
-    .tierra {
-
-        left: 0;
-
-        width: 100%;
-
-        height: 105px;
-
-    }
-
-
-    .brote-izquierdo {
-
-        left: 5%;
-
-    }
-
-
-    .brote-derecho {
+        top: 25px;
 
         right: 5%;
 
+        font-size: 48px;
     }
 
 
-    .mensaje-flor {
+    .jardin-final {
 
-        font-size: 1.1rem;
+        height: 330px;
+    }
 
+
+    .flor-central {
+
+        bottom: 235px;
+
+        transform:
+            translateX(-50%)
+            scale(0.8);
+    }
+
+
+    .flor-izquierda {
+
+        left: 8%;
+
+        bottom: 155px;
+
+        font-size: 48px;
+    }
+
+
+    .flor-derecha {
+
+        right: 8%;
+
+        bottom: 165px;
+
+        font-size: 48px;
+    }
+
+
+    .hoja-final {
+
+        width: 65px;
+
+        height: 30px;
+    }
+
+
+    .hoja-final-1 {
+
+        left: 30%;
+
+        bottom: 110px;
+    }
+
+
+    .hoja-final-2 {
+
+        left: 38%;
+
+        bottom: 145px;
+    }
+
+
+    .hoja-final-3 {
+
+        right: 30%;
+
+        bottom: 115px;
+    }
+
+
+    .hoja-final-4 {
+
+        right: 38%;
+
+        bottom: 150px;
+    }
+
+
+    .mensaje-grande {
+
+        font-size: 17px;
+
+        line-height: 1.8;
     }
 
 }
