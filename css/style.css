@@ -1,1 +1,131 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
+body {
+    min-height: 100vh;
+    font-family: Georgia, serif;
+
+    background:
+        radial-gradient(circle at top, #fff8d6, transparent 45%),
+        linear-gradient(135deg, #fff9df, #ffd95c);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+.contenedor {
+    width: 100%;
+    max-width: 700px;
+    padding: 30px;
+    text-align: center;
+}
+
+.flor {
+    font-size: 90px;
+
+    animation:
+        flotar 3s ease-in-out infinite;
+}
+
+h1 {
+    margin-top: 20px;
+
+    font-size: clamp(38px, 8vw, 64px);
+
+    color: #6b4f00;
+}
+
+.subtitulo {
+    margin-top: 15px;
+
+    font-size: 20px;
+
+    color: #7a6500;
+}
+
+.boton {
+    margin-top: 35px;
+
+    padding: 16px 35px;
+
+    border: none;
+    border-radius: 50px;
+
+    background: #f5c400;
+    color: #4d3900;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.15);
+
+    transition: 0.3s;
+}
+
+.boton:hover {
+    transform: scale(1.08);
+}
+
+.mensaje {
+    display: none;
+
+    margin-top: 35px;
+    padding: 30px;
+
+    background: rgba(255, 255, 255, 0.9);
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.15);
+
+    animation: aparecer 1s ease;
+}
+
+.mensaje h2 {
+    margin-bottom: 15px;
+
+    color: #b88900;
+}
+
+.mensaje p {
+    color: #555;
+
+    line-height: 1.8;
+
+    font-size: 17px;
+}
+
+@keyframes flotar {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-18px);
+    }
+}
+
+@keyframes aparecer {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
